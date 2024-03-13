@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Góp ý về sản phẩm</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    h1, h3 {
+        margin: 5px 0;
+        text-align: center;
+    }
+    h1 {
+        font-size: 24px;
+        color: #5c0066;
+    }
+    h3 {
+        font-size: 14px;
+        color: #888888;
+    }
+    #feedbackForm {
+        max-width: 600px;
+        padding: 10px;
+        border: 1px solid #e9ecef;
+        border-radius: 5px;
+        background-color: #e9ecef;
+    }
+    .feedbackSection section {
+        margin: 5px 0;
+        text-align: left;
+        max-width: calc(100% - 20px);
+        display: inline-block;
+        padding: 10px;
+    }
+    .feedbackSection section h3 {
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    .feedbackSection section input[type="text"],
+    .feedbackSection section input[type="tel"],
+    .feedbackSection section input[type="email"],
+    .feedbackSection section select {
+        width: calc(100% - 20px);
+        padding: 12px;
+        font-size: 14px;
+    }
+    #feedbackForm button[type="submit"] {
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+    }
+    #feedbackForm button[type="submit"]:hover {
+        background-color: #349cbf;
+    }
+</style>
+<body>
+    <h1>Đóng góp ý kiến về sản phẩm</h1>
+    <h3>Góp ý của các bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng Việt có dấu.</h3>
+    <h3>Các ý kiến đóng nên viết chi tiết rõ ràng, kèm theo các minh chứng xác thực thời gian và địa điểm (nếu có).</h3>
+    <section id="feedbackForm">
+        <div class="feedbackSection">
+            <form id="smallSections">
+                <div class="row">
+                    <section>
+                        <input type="text" id="fullName" name="fullName" placeholder="Họ và tên" required>
+                    </section>
+                    <section>
+                        <input type="text" id="cardCode" name="cardCode" placeholder="Mã thẻ" required>
+                    </section>
+                </div>
+                <div class="row">
+                    <section>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10,11}" placeholder="Số điện thoại" required>
+                    </section>
+                    <section>
+                        <input type="email" id="email" name="email" placeholder="E-Mail" required>
+                    </section>
+                </div>
+                <div class="row">
+                    <section>
+                        <select id="customerType" name="customerType" required>
+                            <option value="">Chọn loại khách hàng</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Thường">Thường</option>
+                            <option value="Mới">Mới</option>
+                        </select>
+                    </section>
+                    <section>
+                        <input type="text" id="invoiceCode" name="invoiceCode" placeholder="Mã hoá đơn" required>
+                    </section>
+                </div>
+                <section>
+                    <button type="submit">GỬI GÓP Ý 💬</button>
+                    </section>
+</form>
+</div>
+</section>
+<script>
+    function togglePassword() {
+        var passwordField = document.getElementById("password");
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    }
+</script>
+</body>
+</html>
